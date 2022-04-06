@@ -54,6 +54,7 @@ exports.handler = async function(event, context) {
   
   const page = await browser.newPage();
   
+  console.log(`url => ${url[0]}`);
   await page.goto(url[0]);
   console.time('logo load');
   await page.waitForXPath("//*[@alt='OJO Logo']", { visible: true } )
