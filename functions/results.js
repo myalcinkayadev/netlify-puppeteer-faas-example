@@ -13,7 +13,7 @@ exports.handler = async function(event, context) {
   if (event.httpMethod !== 'POST' || url === null) {
     return {
       statusCode: 400,
-      body: {}
+      body: 'Bad Request'
     }
   }
   
